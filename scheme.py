@@ -338,8 +338,12 @@ def do_define_macro(expressions, env):
     "*** YOUR CODE HERE ***"
     # END Problem 21
 
+def exit_form(expressions, env):
+    return quit()
+
 
 SPECIAL_FORMS = {
+    'exit': exit_form,
     'and': do_and_form,
     'begin': do_begin_form,
     'cond': do_cond_form,
